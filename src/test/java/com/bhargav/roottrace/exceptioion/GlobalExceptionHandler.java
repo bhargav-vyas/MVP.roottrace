@@ -18,6 +18,6 @@ public class GlobalExceptionHandler {
         System.out.println("Message: " + ex.getMessage());
         System.out.println("Time: " + LocalDateTime.now());
 
-        return new ResponseEntity<>("Error captured by RootTrace", HttpStatus.INTERNAL_SERVER_ERROR);
+//        return new ResponseEntity<>("Error captured by RootTrace", HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
