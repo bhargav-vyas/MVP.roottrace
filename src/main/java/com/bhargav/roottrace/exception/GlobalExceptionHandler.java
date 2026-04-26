@@ -23,9 +23,10 @@ public class GlobalExceptionHandler {
          ErrorEventDTO dto =new ErrorEventDTO();
          dto.setException(ex.getClass().getName());
          dto.setMessage(ex.getMessage());
-         dto.setStackTrace(dto.getStackTrace());
+         dto.setStackTrace(getStackTrace(ex));
          dto.setHttpMethod(request.getMethod());
          dto.setTimestamp(LocalDateTime.now());
+         dto.setRequestUrl(request.getRequestURI());
          sender.sendError(dto);
 }
 private String getStackTrace(Exception ex){
