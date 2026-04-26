@@ -2,7 +2,9 @@ package com.bhargav.roottrace.sender;
 
 import com.bhargav.roottrace.dto.ErrorEventDTO;
 import com.bhargav.roottrace.properties.ErrorMonitorProperties;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ErrorSenderService {
 
     private   final ErrorMonitorProperties properties;
